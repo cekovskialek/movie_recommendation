@@ -30,27 +30,39 @@ Merged ratings and movie metadata
 Removed unnecessary columns (e.g. timestamp)
 
 Converted ratings into binary labels:
+
 1 → rating ≥ 4.0 (Liked)
+
 0 → rating < 4.0 (Not Liked)
 
 Encoded categorical variables (userId, movieId)
+
 Used sampled subsets (100k train / 20k test) for efficiency
+
 🤖 Models Used
+
 1. K-Nearest Neighbors (KNN)
+
 Tested with multiple:
+
 Distance metrics: Euclidean, Manhattan, Cosine
+
+
 Values of k: 5, 6, 7
+
 Train-test splits: 60/40, 70/30, 80/20
+
 Evaluated performance sensitivity to distance metric and neighbor count
-2. Random Forest Classifier
+
+3. Random Forest Classifier
 Ensemble model using decision trees
 Tested across all data splits
 Provided stable baseline performance
-3. XGBoost Classifier
+4. XGBoost Classifier
 Gradient boosting model optimized for structured data
 Achieved strong performance across all splits
 Tuned using default parameters for comparison
-4. LightGBM Classifier
+5. LightGBM Classifier
 High-performance gradient boosting model
 Fast training and competitive accuracy
 Evaluated under same experimental conditions
