@@ -3,6 +3,7 @@
 📌 Project Overview
 
 This project is a machine learning-based movie recommendation system built in Python.
+
 It analyzes user-movie rating behavior and predicts whether a user will like a movie or not (binary classification).
 
 The system was developed as part of a machine learning course project and focuses on model comparison, performance evaluation, and data analysis using real-world datasets.
@@ -17,14 +18,21 @@ movie.csv – movie metadata (titles, genres)
 After merging:
 
 ~20 million ratings
+
 138,000+ users
+
 26,000+ movies
+
 Preprocessing steps:
+
 Merged ratings and movie metadata
+
 Removed unnecessary columns (e.g. timestamp)
+
 Converted ratings into binary labels:
 1 → rating ≥ 4.0 (Liked)
 0 → rating < 4.0 (Not Liked)
+
 Encoded categorical variables (userId, movieId)
 Used sampled subsets (100k train / 20k test) for efficiency
 🤖 Models Used
